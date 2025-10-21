@@ -21,22 +21,30 @@ body {
   padding: 50px 0px;
 }
 
+.glass-text-wrapper {
+  position: fixed; /* so it stays relative to the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Optional: to avoid interfering with other elements */
+  pointer-events: none; 
+  z-index: 1000; /* make sure it's on top */
+}
+
 .glass-text {
-  position: absolute; /* position as needed */
-  top: 20px;          /* adjust position */
-  left: 20px;
-  font-size: 2rem;    /* adjust size */
+  font-size: 14rem;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.8); /* slightly transparent white */
-  background: rgba(255, 255, 255, 0.1); /* translucent background */
-  border-radius: 10px;
-  padding: 10px 20px;
-  backdrop-filter: blur(8px); /* glass effect */
-  -webkit-backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
   user-select: none;
-  pointer-events: none; /* optional, so it doesn’t interfere with UI */
-  z-index: 10;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
 }
 
 
@@ -48,7 +56,40 @@ body {
   width: 100%;
   height: 100%;
   filter: blur(0.1vmin);
+  background-image: radial-gradient(
+      ellipse at top,
+      transparent 0%,
+      var(--dark-color)
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      var(--dark-color),
+      rgba(145, 233, 255, 0.2)
+    ),
+    repeating-linear-gradient(
+      220deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      189deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      148deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 19px,
+      transparent 19px,
+      transparent 22px
+    ),
+    linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 }
+
 
 .flowers {
   position: relative;
