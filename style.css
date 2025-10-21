@@ -14,10 +14,10 @@ h1 {
   color: transparent;
   -webkit-background-clip: text; /* Edge, Chrome */
   background-clip: text; /* Safari, FF */
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgtsKdUfMfydRTpHiC1bIm_QuxTxFzubGeIA&s);
+  background-image: url(https://img.freepik.com/premium-vector/cute-colorful-flowers-leaf-dark-blue-color-background-seamless-pattern_36430-1398.jpg?semt=ais_incoming&w=740&q=80);
   background-size: contain;
-  /* -webkit-text-stroke: 1px;
-  --text-stroke: 1px; */
+  /* -webkit-text-stroke: 1px #7512d7;
+  --text-stroke: 1px #7512d7; */
 }
 
 body {
