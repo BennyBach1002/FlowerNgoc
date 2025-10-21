@@ -21,6 +21,25 @@ body {
   padding: 50px 0px;
 }
 
+.glass-text {
+  position: absolute; /* position as needed */
+  top: 20px;          /* adjust position */
+  left: 20px;
+  font-size: 2rem;    /* adjust size */
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8); /* slightly transparent white */
+  background: rgba(255, 255, 255, 0.1); /* translucent background */
+  border-radius: 10px;
+  padding: 10px 20px;
+  backdrop-filter: blur(8px); /* glass effect */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  pointer-events: none; /* optional, so it doesn’t interfere with UI */
+  z-index: 10;
+}
+
+
 .night {
   position: fixed;
   left: 50%;
@@ -156,7 +175,7 @@ body {
       transform: translate(-50%, -100%);
       width: 8vmin;
       height: 8vmin;
-      background-color: #6bf0ff;
+      background-color: #f672b0;
       filter: blur(10vmin);
     }
   }
@@ -168,8 +187,8 @@ body {
     width: 8vmin;
     height: 11vmin;
     border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
-    background-color: #a7ffee;
-    background-image: linear-gradient(to top, #54b8aa, #a7ffee);
+    background-color: #f672b0;
+    background-image: linear-gradient(to top, #ee5286, #ee5286);
     transform-origin: bottom center;
     opacity: 0.9;
     box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -192,7 +211,7 @@ body {
       transform-origin: bottom left;
       border-radius: 4vmin 10vmin 4vmin 4vmin;
       transform: translate(-0%, 18%) rotateX(70deg) rotate(-43deg);
-      background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+      background-image: linear-gradient(to top, #84990c, #ffa7ae);
       z-index: 1;
       opacity: 0.8;
     }
